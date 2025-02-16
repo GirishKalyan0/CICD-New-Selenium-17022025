@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-16T15:02:01 IST" name="Suite" finished-at="2025-02-16T15:02:32 IST" duration-ms="31035">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="NegativeTest.errorTest()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" name="errorTest" class="Automated.Tests.NegativeTest"/>
+        <method signature="NegativeTest.productErrorValidation()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" name="productErrorValidation" class="Automated.Tests.NegativeTest"/>
+      </group> <!-- ErrorHandling -->
+      <group name="purchase">
+        <method signature="OrderE2ETest.orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" name="orderZaraCoat" class="Automated.Tests.OrderE2ETest"/>
+      </group> <!-- purchase -->
+    </groups>
+    <test started-at="2025-02-16T15:02:01 IST" name="Negative Test" finished-at="2025-02-16T15:02:16 IST" duration-ms="15132">
+      <class name="Automated.Tests.NegativeTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:01 IST" name="launchApp" finished-at="2025-02-16T15:02:04 IST" duration-ms="2865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="errorTest()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:04 IST" name="errorTest" finished-at="2025-02-16T15:02:04 IST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errorTest -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:04 IST" name="closeDriver" finished-at="2025-02-16T15:02:05 IST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:05 IST" name="launchApp" finished-at="2025-02-16T15:02:08 IST" duration-ms="3154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="productErrorValidation()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:08 IST" name="productErrorValidation" finished-at="2025-02-16T15:02:16 IST" duration-ms="8557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.NegativeTest@235ecd9f]" started-at="2025-02-16T15:02:16 IST" name="closeDriver" finished-at="2025-02-16T15:02:16 IST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automated.Tests.NegativeTest -->
+    </test> <!-- Negative Test -->
+    <test started-at="2025-02-16T15:02:01 IST" name="Positive Test" finished-at="2025-02-16T15:02:32 IST" duration-ms="31035">
+      <class name="Automated.Tests.OrderE2ETest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:01 IST" name="launchApp" finished-at="2025-02-16T15:02:04 IST" duration-ms="2970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="checkOrder()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:04 IST" name="checkOrder" finished-at="2025-02-16T15:02:05 IST" duration-ms="378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrder -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:05 IST" name="closeDriver" finished-at="2025-02-16T15:02:05 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:05 IST" name="launchApp" finished-at="2025-02-16T15:02:08 IST" duration-ms="2933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:08 IST" name="orderZaraCoat" data-provider="getDataset" finished-at="2025-02-16T15:02:19 IST" duration-ms="11097" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Kk@12345, email=raavan123@nomail.com, myprod=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderZaraCoat -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:19 IST" name="closeDriver" finished-at="2025-02-16T15:02:19 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:19 IST" name="launchApp" finished-at="2025-02-16T15:02:21 IST" duration-ms="1856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:21 IST" name="orderZaraCoat" data-provider="getDataset" finished-at="2025-02-16T15:02:32 IST" duration-ms="11084" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Kk@12345, email=raavan123@nomail.com, myprod=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderZaraCoat -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@d9345cd]" started-at="2025-02-16T15:02:32 IST" name="closeDriver" finished-at="2025-02-16T15:02:32 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automated.Tests.OrderE2ETest -->
+    </test> <!-- Positive Test -->
+  </suite> <!-- Suite -->
+</testng-results>

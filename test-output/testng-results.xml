@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="0" total="6" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-15T15:58:55 IST" name="Suite" finished-at="2025-02-15T16:00:26 IST" duration-ms="91479">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="NegativeTest.errorTest()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" name="errorTest" class="Automated.Tests.NegativeTest"/>
+        <method signature="NegativeTest.productErrorValidation()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" name="productErrorValidation" class="Automated.Tests.NegativeTest"/>
+      </group> <!-- ErrorHandling -->
+      <group name="purchase">
+        <method signature="OrderE2ETest.orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" name="orderZaraCoat" class="Automated.Tests.OrderE2ETest"/>
+      </group> <!-- purchase -->
+    </groups>
+    <test started-at="2025-02-15T15:58:55 IST" name="Negative Test" finished-at="2025-02-15T16:00:03 IST" duration-ms="68639">
+      <class name="Automated.Tests.NegativeTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:58:55 IST" name="launchApp" finished-at="2025-02-15T15:59:09 IST" duration-ms="13906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method retried="true" signature="errorTest()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:09 IST" name="errorTest" finished-at="2025-02-15T15:59:12 IST" duration-ms="3531" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<Incorrect emailor password.> but was:<Incorrect email or password.>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<Incorrect emailor password.> but was:<Incorrect email or password.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
+at Automated.Tests.NegativeTest.errorTest(NegativeTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errorTest -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:12 IST" name="closeDriver" finished-at="2025-02-15T15:59:12 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:12 IST" name="launchApp" finished-at="2025-02-15T15:59:25 IST" duration-ms="12261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="errorTest()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:25 IST" name="errorTest" finished-at="2025-02-15T15:59:28 IST" duration-ms="3543" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<Incorrect emailor password.> but was:<Incorrect email or password.>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<Incorrect emailor password.> but was:<Incorrect email or password.>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
+at Automated.Tests.NegativeTest.errorTest(NegativeTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errorTest -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:29 IST" name="closeDriver" finished-at="2025-02-15T15:59:29 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:29 IST" name="launchApp" finished-at="2025-02-15T15:59:40 IST" duration-ms="10709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="productErrorValidation()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T15:59:40 IST" name="productErrorValidation" finished-at="2025-02-15T16:00:03 IST" duration-ms="23549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.NegativeTest@335b5620]" started-at="2025-02-15T16:00:03 IST" name="closeDriver" finished-at="2025-02-15T16:00:03 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automated.Tests.NegativeTest -->
+    </test> <!-- Negative Test -->
+    <test started-at="2025-02-15T15:58:55 IST" name="Positive Test" finished-at="2025-02-15T16:00:26 IST" duration-ms="91479">
+      <class name="Automated.Tests.OrderE2ETest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T15:58:55 IST" name="launchApp" finished-at="2025-02-15T15:59:09 IST" duration-ms="13757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T15:59:09 IST" name="orderZaraCoat" data-provider="getDataset" finished-at="2025-02-15T15:59:32 IST" duration-ms="23087" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Kk@12345, email=raavan123@nomail.com, myprod=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderZaraCoat -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T15:59:32 IST" name="closeDriver" finished-at="2025-02-15T15:59:32 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T15:59:32 IST" name="launchApp" finished-at="2025-02-15T15:59:42 IST" duration-ms="9834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="orderZaraCoat(java.util.HashMap)[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T15:59:42 IST" name="orderZaraCoat" data-provider="getDataset" finished-at="2025-02-15T16:00:10 IST" duration-ms="28181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Kk@12345, email=raavan123@nomail.com, myprod=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderZaraCoat -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T16:00:10 IST" name="closeDriver" finished-at="2025-02-15T16:00:10 IST" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T16:00:10 IST" name="launchApp" finished-at="2025-02-15T16:00:22 IST" duration-ms="11538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="checkOrder()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T16:00:22 IST" name="checkOrder" finished-at="2025-02-15T16:00:26 IST" depends-on-methods="Automated.Tests.OrderE2ETest.orderZaraCoat" duration-ms="4337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrder -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Automated.Tests.OrderE2ETest@130e116b]" started-at="2025-02-15T16:00:26 IST" name="closeDriver" finished-at="2025-02-15T16:00:26 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automated.Tests.OrderE2ETest -->
+    </test> <!-- Positive Test -->
+  </suite> <!-- Suite -->
+</testng-results>
