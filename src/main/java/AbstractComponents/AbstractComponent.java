@@ -1,7 +1,6 @@
 package AbstractComponents;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,10 +18,10 @@ public class AbstractComponent {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(xpath = "//button[contains(@routerlink,'myorders')]")
 	WebElement ordersBtn;
-	
+
 	public void explicitWait(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(findBy));
@@ -35,13 +34,13 @@ public class AbstractComponent {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
-	
+
 	public void explicitWait4(WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
-	
-	
+
+
 	public OrderPage gotoOrders() {
 		ordersBtn.click();
 		OrderPage orders = new OrderPage(driver);

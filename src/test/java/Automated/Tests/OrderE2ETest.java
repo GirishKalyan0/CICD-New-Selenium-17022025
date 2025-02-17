@@ -1,21 +1,15 @@
 package Automated.Tests;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import AbstractComponents.AbstractComponent;
-
-import org.testng.AssertJUnit;
-
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import AbstractComponents.AbstractComponent;
 import Automated.components.BaseTest;
 import Automated.components.Retry;
 import PageObjects.CartPage;
@@ -64,7 +58,7 @@ public class OrderE2ETest extends BaseTest {
 		AbstractComponent ab = logpage.login(email, password);
 		OrderPage orders = ab.gotoOrders();
 		Assert.assertTrue(orders.validateProd(myProd));
-		
+
 	}
 
 	@DataProvider
@@ -81,14 +75,14 @@ public class OrderE2ETest extends BaseTest {
 //		map2.put("email", "raavan123@nomail.com");
 //		map2.put("password", "Kk@12345");
 //		map2.put("myprod", "ZARA COAT 3");
-		
+
 		List<HashMap<String,String>> data = getJsonDataToMap(System.getProperty("user.dir") + "/src/main/java/Resources/DataManager.json");
 
 		return new Object[][] { { data.get(0) }, { data.get(1) } };
-		
-		//return new Object[][] { {"raavan123@nomail.com", "Kk@12345","ADIDAS ORIGINAL"}, 
+
+		//return new Object[][] { {"raavan123@nomail.com", "Kk@12345","ADIDAS ORIGINAL"},
 		//{"raavan123@nomail.com", "Kk@12345","ADIDAS ORIGINAL"} };
 	}
-	
-	
+
+
 }

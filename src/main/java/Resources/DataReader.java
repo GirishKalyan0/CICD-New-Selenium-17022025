@@ -12,20 +12,20 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataReader {
-	
+
 	public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
 		// json to string
-		
-		String jsonContent=FileUtils.readFileToString(new File(System.getProperty("user.dir") 
+
+		String jsonContent=FileUtils.readFileToString(new File(System.getProperty("user.dir")
 				+"/src/main/java/Resources/DataManager.json"),StandardCharsets.UTF_8);
 		// string to map
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String,String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String,String>>>(){
-			
+
 		});
-		
+
 		return data;
-		
+
 	}
 
 }

@@ -13,15 +13,15 @@ import com.aventstack.extentreports.Status;
 
 
 public class TestNGListeners extends BaseTest implements ITestListener{
-	
+
 	ExtentTest test;
 	ExtentReports extent =  ExtentReporterNG.getreportObject();
 	String source;
 	ThreadLocal<ExtentTest> tthread= new ThreadLocal();
-	
+
 	@Override
 	public void onTestStart(ITestResult result) {
-		
+
 		System.out.println("Test Started: " + result.getName());
 		test=extent.createTest(result.getMethod().getMethodName());
 		tthread.set(test);
@@ -38,15 +38,15 @@ public class TestNGListeners extends BaseTest implements ITestListener{
 		System.out.println("Test Failed: " + result.getName());
 		tthread.get().log(Status.FAIL, "Failed");
 		tthread.get().fail(result.getThrowable());
-		
+
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
-		
-		
+		}
+
+
 		try {
 			 source=getScreenShot(result.getMethod().getMethodName(),driver);
 		} catch (IOException e) {

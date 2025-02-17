@@ -1,10 +1,8 @@
 package Automated.Tests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import Automated.components.BaseTest;
@@ -30,7 +28,7 @@ public class NegativeTest extends BaseTest {
 		AssertJUnit.assertEquals("Incorrect email or password.", logpage.errormessage());
 
 	}
-	
+
 	@Test(groups= {"ErrorHandling"})
 	public void productErrorValidation() throws InterruptedException, IOException {
 
