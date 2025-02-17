@@ -64,7 +64,7 @@ public class OrderE2ETest extends BaseTest {
 		AbstractComponent ab = logpage.login(email, password);
 		OrderPage orders = ab.gotoOrders();
 		Assert.assertTrue(orders.validateProd(myProd));
-
+		
 	}
 
 	@DataProvider
