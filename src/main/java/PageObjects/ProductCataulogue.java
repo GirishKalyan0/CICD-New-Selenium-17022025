@@ -48,9 +48,9 @@ public class ProductCataulogue extends AbstractComponent {
 	public void addToKart(String myProd) throws InterruptedException {
 		WebElement prod = getProdByName(myProd);
 		prod.findElement(addtoKart).click();
-		explicitWait2(toast);
-		explicitWait3(spinner);
-		//Thread.sleep(8000);
+		// explicitWait2(toast);
+		// explicitWait3(spinner);
+		Thread.sleep(5000);
 		cart.click();
 	}
 
