@@ -1,15 +1,14 @@
 package Automated.Tests;
 
-import java.io.IOException;
-
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-
 import Automated.components.BaseTest;
 import Automated.components.Retry;
 import PageObjects.CartPage;
 import PageObjects.CheckOutPage;
 import PageObjects.ProductCataulogue;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 
 public class NegativeTest extends BaseTest {
@@ -25,7 +24,7 @@ public class NegativeTest extends BaseTest {
 	@Test(groups= {"ErrorHandling"},retryAnalyzer=Retry.class)
 	public void errorTest() {
 		logpage.login(email, password);
-		AssertJUnit.assertEquals("Incorrect email or password.", logpage.errormessage());
+		AssertJUnit.assertEquals("Incorrect email or password.  ", logpage.errormessage());
 
 	}
 
