@@ -1,4 +1,4 @@
-name: Scheduled Selenium Tests (Windows + Chrome 142)
+name: Scheduled Selenium Tests
 
 on:
   schedule:
