@@ -1,36 +1,39 @@
 name: Scheduled Selenium Tests
 
 on:
-  # Run every day at 1:30 AM IST
-  schedule:
-    - cron: "55 11 * * *"   # UTC equivalent for 1:30 AM IST
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
-  run-tests:
+  selenium-test:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: "17"
+          java-version: '17'
+          distribution: 'temurin'
 
       - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.m2/repository
+          path: ~/.m2
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             maven-${{ runner.os }}-
 
-      - name: Clean & Run Tests
-        run: mvn clean test -DsuiteXmlFile=TestNGxmls/Grouping.xml -DchromeOptions.args="--headless"
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Run Selenium Tests
+        run: mvn clean test
 
       - name: Upload TestNG Reports
         if: always()
