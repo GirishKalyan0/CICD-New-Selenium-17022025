@@ -1,19 +1,20 @@
 name: Scheduled Selenium Tests
 
 on:
+  # Run every day at 1:30 AM IST
   schedule:
-    - cron: "55 11 * * *"
+    - cron: "55 11 * * *"   # UTC equivalent for 1:30 AM IST
   workflow_dispatch:
 
 jobs:
   run-tests:
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -22,26 +23,14 @@ jobs:
       - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.m2/repository
+          path: |
+            ~/.m2/repository
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
-          restore-keys: maven-${{ runner.os }}-
+          restore-keys: |
+            maven-${{ runner.os }}-
 
-      # OPTIONAL – only if exact Chrome 142 is mandatory
-      - name: Install Chrome (optional exact version)
-        if: secrets.CHROME_142_MSI_URL != ''
-        shell: pwsh
-        run: |
-          $msi = "$env:RUNNER_TEMP\chrome142.msi"
-          Invoke-WebRequest ${{ secrets.CHROME_142_MSI_URL }} -OutFile $msi
-          Start-Process msiexec.exe -ArgumentList "/i $msi /qn /norestart" -Wait
-
-      - name: Run Selenium Tests
-        shell: pwsh
-        run: |
-          mvn clean test `
-            -DsuiteXmlFile=TestNGxmls/Grouping.xml `
-            -Dheadless=true `
-            -DwindowSize=1920,1080
+      - name: Clean & Run Tests
+        run: mvn clean test -DsuiteXmlFile=TestNGxmls/Grouping.xml -DchromeOptions.args="--headless"
 
       - name: Upload TestNG Reports
         if: always()
