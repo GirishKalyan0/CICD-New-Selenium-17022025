@@ -24,10 +24,12 @@
             <artifactId>selenium-java</artifactId>
             <version>4.26.0</version>
         </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v134 -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v143</artifactId>
-            <version>4.26.0</version>
+            <artifactId>selenium-devtools-v134</artifactId>
+            <version>4.32.0</version>
+            <scope>compile</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <!--
