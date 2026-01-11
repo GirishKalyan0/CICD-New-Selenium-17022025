@@ -3,7 +3,7 @@ name: Scheduled Selenium Tests
 on:
   # Run every day at 1:30 AM IST
   schedule:
-    - cron: "0 20 * * *"   # UTC equivalent for 1:30 AM IST
+    - cron: "55 11 * * *"   # UTC equivalent for 1:30 AM IST
   workflow_dispatch:
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
             maven-${{ runner.os }}-
 
       - name: Clean & Run Tests
-        run: mvn clean test -DsuiteXmlFile=TestNGxmls/Grouping.xml
+        run: mvn clean test -DsuiteXmlFile=TestNGxmls/Grouping.xml -DchromeOptions.args="--headless"
 
       - name: Upload TestNG Reports
         if: always()
