@@ -42,11 +42,16 @@ public class BaseTest {
 		if (browserName.contains("chrome")) {
 			ChromeOptions cp = new ChromeOptions();
 			cp.addArguments("--incognito");
-			cp.addArguments("--headless"); // Always with two dashes in modern Chrome
-			cp.addArguments("--no-sandbox"); // Required for many CI containers
+			// Use new headless mode (if you need headless in CI). If you want to debug, remove headless.
+			cp.addArguments("--headless=new");
+			cp.addArguments("--no-sandbox");
 			cp.addArguments("--disable-dev-shm-usage");
+			// ensure a fixed large viewport
+			cp.addArguments("--window-size=1920,1080");
 			driver = new ChromeDriver(cp);
-			driver.manage().window().setSize(new Dimension(1440, 900));
+			// optional: set size again (not mandatory if window-size argument is present)
+			driver.manage().window().setSize(new Dimension(1920, 1080));
+
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 
