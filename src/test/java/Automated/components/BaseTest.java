@@ -1,14 +1,8 @@
 package Automated.components;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.time.Duration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Properties;
-
+import PageObjects.loginPage;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -20,10 +14,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import PageObjects.loginPage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Properties;
 
 public class BaseTest {
 	public WebDriver driver;
@@ -44,9 +42,9 @@ public class BaseTest {
 		if (browserName.contains("chrome")) {
 			ChromeOptions cp = new ChromeOptions();
 			cp.addArguments("--incognito");
-			if (browserName.contains("headless")) {
-				cp.addArguments("headless");
-			}
+			cp.addArguments("--headless"); // Always with two dashes in modern Chrome
+			cp.addArguments("--no-sandbox"); // Required for many CI containers
+			cp.addArguments("--disable-dev-shm-usage");
 			driver = new ChromeDriver(cp);
 			driver.manage().window().setSize(new Dimension(1440, 900));
 
@@ -99,7 +97,9 @@ public class BaseTest {
 
 	@AfterMethod(alwaysRun = true)
 	public void closeDriver() {
-		driver.close();
+		if (driver != null) {
+			driver.close();
+		}
 	}
 
 }
